@@ -1,0 +1,17 @@
+! multimedia buttons, see http://www.thinkwiki.org/wiki/How_to_get_special_keys_to_work#xmodmap_configuration
+keycode 171 = XF86AudioNext
+keycode 172 = XF86AudioPlay
+keycode 173 = XF86AudioPrev
+keycode 174 = XF86AudioStop
+
+! window/menu key, see http://www.thinkwiki.org/wiki/How_to_get_special_keys_to_work#Enabling_the_Windows_and_Menu_Keys
+keycode 151 = F13
+keycode 133 = F35
+keycode 115 = End
+
+keycode 166 = XF86Back
+keycode 167 = XF86Forward
+
+keycode 233 = XF86KbdBrightnessUp
+keycode 232 = XF86KbdBrightnessDown
+
