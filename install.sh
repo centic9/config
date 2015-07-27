@@ -8,3 +8,6 @@ ln -sf `pwd`/.xinitrc ~/
 
 test -L ~/.Xmodmap && rm ~/.Xmodmap
 ln -sf `pwd`/.Xmodmap ~/
+
+test -L ~/.toprc && rm ~/.toprc
+ln -sf `pwd`/.toprc ~/
