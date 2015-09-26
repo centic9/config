@@ -107,7 +107,7 @@ function gbout {
 
 
 export TERM=xterm
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
 DEBEMAIL=dominik.stadler@gmx.at
 DEBFULLNAME="Dominik Stadler (Ubuntu key)"
