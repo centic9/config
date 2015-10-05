@@ -38,4 +38,4 @@ https://github.com/nojhan/liquidprompt
     sudo dpkg --add-architecture i386
     sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
     sudo apt-get update
-    gksu gdebi subversion gradle firefox ant oracle-java8-installer oracle-java8-set-default skype git git-svn gitk geany synaptic build-essential linux-headers-generic synaptic rsync putty ssh
+    gksu gdebi subversion gradle firefox ant oracle-java8-installer oracle-java8-set-default skype git git-svn gitk geany synaptic build-essential linux-headers-generic synaptic rsync putty ssh iotop wget culr
