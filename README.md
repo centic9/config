@@ -35,7 +35,9 @@ https://github.com/nojhan/liquidprompt
     sudo add-apt-repository ppa:cwchien/gradle
     sudo add-apt-repository ppa:git-core/ppa
     sudo add-apt-repository ppa:git-core/build-deps
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo add-apt-repository ppa:dominik-stadler/subversion-1.9
     sudo dpkg --add-architecture i386
     sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
     sudo apt-get update
-    gksu gdebi subversion gradle firefox ant oracle-java8-installer oracle-java8-set-default skype git git-svn gitk geany synaptic build-essential linux-headers-generic synaptic rsync putty ssh iotop wget culr
+    gksu gdebi subversion gradle firefox ant oracle-java8-installer oracle-java8-set-default skype git git-svn gitk geany synaptic build-essential linux-headers-generic synaptic rsync putty ssh libgnome2-bin atom dos2unix iotop wget curl
