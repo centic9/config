@@ -34,7 +34,6 @@ https://github.com/nojhan/liquidprompt
     sudo add-apt-repository ppa:webupd8team/java
     sudo add-apt-repository ppa:cwchien/gradle
     sudo add-apt-repository ppa:git-core/ppa
-    sudo add-apt-repository ppa:git-core/build-deps
     sudo add-apt-repository ppa:webupd8team/atom
     sudo add-apt-repository ppa:dominik-stadler/subversion-1.9
     sudo dpkg --add-architecture i386
