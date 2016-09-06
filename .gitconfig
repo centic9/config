@@ -48,7 +48,8 @@
   l  = log --oneline --decorate=short
   
   # [l = log] short one line logs with ref-names, date and author - nice colored
-  l2 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative
+  #https://coderwall.com/p/euwpig/a-better-git-log
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   
   # [gl = graph log]
   gl = log --oneline --decorate --stat --graph
@@ -130,7 +131,6 @@
 [core]
 	editor = vim
 	askpass = /usr/lib/git-core/git-gui--askpass
-	autocrlf = input
 [merge]
 	tool = bc3
 [mergetool "bc3"]

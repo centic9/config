@@ -14,3 +14,6 @@ ln -sf `pwd`/.toprc ~/
 
 test -L ~/.gitconfig && mv ~/.gitconfig /tmp/.gitconfig.sav
 ln -sf `pwd`/.gitconfig ~/
+
+test -L ~/.gitk && mv ~/.gitk /tmp/.gitk.sav
+ln -sf `pwd`/.gitk ~/

@@ -88,6 +88,9 @@ alias debuildexisting='debuild -i.git -S -sd'
 alias doc='sudo docker'
 alias g='__gradle_func'
 alias o='__gnome_open_func'
+alias git-import-orig='gbp import-orig'
+alias git-import-dsc='gbp import-dsc'
+alias git-import-dscs='gbp import-dscs'
 
 # * If on master: gbin branch1 <-- this will show you what's in branch1 and not in master
 # * If on master: gbout branch1 <-- this will show you what's in master that's not in branch 1
