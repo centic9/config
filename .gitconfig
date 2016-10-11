@@ -131,6 +131,7 @@
 [core]
 	editor = vim
 	askpass = /usr/lib/git-core/git-gui--askpass
+	autocrlf = input
 [merge]
 	tool = bc3
 [mergetool "bc3"]

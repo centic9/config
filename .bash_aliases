@@ -50,6 +50,7 @@ function __gnome_open_func() {
 	do
 		echo $i
 		gnome-open "$i"
+		sleep 2
 	done
 }
 

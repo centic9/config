@@ -17,3 +17,6 @@ ln -sf `pwd`/.gitconfig ~/
 
 test -L ~/.gitk && mv ~/.gitk /tmp/.gitk.sav
 ln -sf `pwd`/.gitk ~/
+
+test -L ~/.Rprofile && mv ~/.Rprofile /tmp/.Rprofile.sav
+ln -sf `pwd`/.Rprofile ~/
