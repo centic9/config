@@ -33,12 +33,12 @@ function _u_func() {
 function __gradle_func() {
 	if [ -x gradlew ]
 	then
-		./gradlew "$@" | \
+		nice -n 10 ./gradlew "$@" | \
   perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   (which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   (which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
 	else
-		gradle "$@" | \
+		nice -n 10 gradle "$@" | \
   perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   (which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   (which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
@@ -83,7 +83,7 @@ alias svndiff='svn diff --diff-cmd diff -x -uw '
 alias iot='sudo iotop -d 30 -o -P -k'
 alias ifwatch='sudo watch --differences=cumulative --interval=30 ifconfig'
 alias usbmount='for i in b c d e f;do _usbmount /usb$i;done;mount | grep usb'
-alias usbumount='for i in b c d e f;do _usbumount /usb$i;done;mount | grep usb'
+alias usbumount='for i in a b c d e f;do _usbumount /usb$i;done;mount | grep usb'
 alias debuildnew='debuild -i.git -S -sa'
 alias debuildexisting='debuild -i.git -S -sd'
 alias doc='sudo docker'
