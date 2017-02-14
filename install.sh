@@ -20,3 +20,6 @@ ln -sf `pwd`/.gitk ~/
 
 test -L ~/.Rprofile && mv ~/.Rprofile /tmp/.Rprofile.sav
 ln -sf `pwd`/.Rprofile ~/
+
+test -L ~/.xbindkeysrc && mv ~/.xbindkeysrc /tmp/.xbindkeysrc.sav
+ln -sf `pwd`/.xbindkeysrc ~/
