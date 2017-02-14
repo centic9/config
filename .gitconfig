@@ -133,7 +133,7 @@
 	askpass = /usr/lib/git-core/git-gui--askpass
 	autocrlf = input
 [merge]
-	tool = bc3
+	tool = meld
 [mergetool "bc3"]
 	cmd = /usr/bin/bcompare \"$LOCAL\" \"$REMOTE\" \"-savetarget=$MERGED\"
 	trustExitCode = true
