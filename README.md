@@ -2,6 +2,7 @@ Small helper project which stores some config-files that I would like to have on
 
 ## How to use
 
+    sudo apt-get install git
     git clone https://github.com/centic9/config.git
     cd config
     ./install.sh
