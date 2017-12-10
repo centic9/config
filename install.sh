@@ -3,6 +3,9 @@
 test -L ~/.bash_aliases && mv ~/.bash_aliases /tmp/.bash_aliases.sav
 ln -sf `pwd`/.bash_aliases ~/
 
+test -L ~/.dput.cf && mv ~/.dput.cf /tmp/.dput.cf.sav
+ln -sf `pwd`/.dput.cf ~/
+
 test -L ~/.xinitrc && mv ~/.xinitrc /tmp/.xinitrc.sav
 ln -sf `pwd`/.xinitrc ~/
 
