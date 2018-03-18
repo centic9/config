@@ -144,3 +144,5 @@
 	ui = 1
 [http]
 	postBuffer = 2M
+[credential]
+	helper = cache
