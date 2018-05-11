@@ -111,7 +111,11 @@ function gbout {
 
 
 export TERM=xterm
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+if [ `uname --machine` == armv7l ];then
+  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
+else
+  export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+fi
 
 DEBEMAIL=dominik.stadler@gmx.at
 DEBFULLNAME="Dominik Stadler (Ubuntu key)"
