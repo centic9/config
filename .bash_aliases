@@ -112,7 +112,7 @@ function gbout {
 
 export TERM=xterm
 if [ `uname --machine` == armv7l ];then
-  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
+  export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 else
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 fi
