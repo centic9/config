@@ -60,7 +60,11 @@ alias ai="sudo apt-get install"
 alias au="au_func"
 alias lcdoff="xset dpms force off"
 alias apo="apt-cache policy"
-alias u="_u_func"
+if [ `uname --machine` == armv7l ];then
+  alias u="vi"
+else
+  alias u="_u_func"
+fi
 alias iotop="iotop -o -d 5 -P -k"
 alias bob="/etc/cron.daily/bob"
 
