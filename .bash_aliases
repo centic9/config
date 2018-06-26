@@ -60,7 +60,7 @@ alias ai="sudo apt-get install"
 alias au="au_func"
 alias lcdoff="xset dpms force off"
 alias apo="apt-cache policy"
-if [ `uname --machine` == armv7l ];then
+if [ `uname --machine` == armv7l -o `uname --machine` == armv6l ];then
   alias u="vi"
 else
   alias u="_u_func"
@@ -114,7 +114,7 @@ function gbout {
 }
 
 
-if [ `uname --machine` == armv7l ];then
+if [ `uname --machine` == armv7l -o `uname --machine` == armv6l ];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 else
