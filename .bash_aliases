@@ -145,5 +145,6 @@ memtop() { ps aux | sort -nk +4 | tail; }
 
 # somehow this did include spansish es_ES?!
 export LANGUAGE="de_AT:de"
+export LANG=de_AT.UTF-8
 
 export EDITOR=vi
