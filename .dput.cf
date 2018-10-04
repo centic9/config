@@ -103,6 +103,20 @@ incoming = ~dominik-stadler/dsta-xenial-ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
+[artful-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-artful-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[bionic-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-bionic-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
 [subversion17-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
