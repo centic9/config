@@ -18,7 +18,7 @@ function au_func() {
 
 function _usbmount() {
 	#echo "Looking at $1"
-	mount $1 2> /dev/null && (echo "Mounting $1" && nautilus $1 &)
+	mount $1 2> /dev/null && (echo "Mounting $1 " && nautilus $1 2> /dev/null &)
 }
 
 function _usbumount() {
@@ -119,7 +119,7 @@ if [ `uname --machine` == armv7l -o `uname --machine` == armv6l ];then
   export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 else
   export TERM=xterm
-  export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+  export JAVA_HOME=/usr/lib/jvm/java-11-oracle/
 fi
 
 DEBEMAIL=dominik.stadler@gmx.at
