@@ -33,12 +33,12 @@ function _u_func() {
 function __gradle_func() {
 	if [ -x gradlew ]
 	then
-		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ./gradlew "$@" | \
+		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ./gradlew --warning-mode all "$@" | \
   perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   (which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   (which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
 	else
-		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 gradle "$@" | \
+		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 gradle --warning-mode all "$@" | \
   perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   (which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   (which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
@@ -66,7 +66,7 @@ else
   alias u="_u_func"
 fi
 alias iotop="iotop -o -d 5 -P -k"
-alias bob="/etc/cron.daily/bob"
+alias ll="ls -al"
 
 # git aliases, http://www.catonmat.net/blog/git-aliases/
 alias ga='git add'
