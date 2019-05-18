@@ -31,7 +31,7 @@ function _u_func() {
 }
 
 function __gradle_func() {
-	if [ -x gradlew ]
+	if [[ -x gradlew ]]
 	then
 		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ./gradlew --warning-mode all "$@" | \
   perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
@@ -46,11 +46,33 @@ function __gradle_func() {
 }
 
 function __gnome_open_func() {
+    # there are different tools for opening files with the
+    # associated application, use one that is available or
+    # fail if none is found
+    OPTION=
+    if [[ -x /usr/bin/gnome-open ]]; then
+        TOOL=/usr/bin/gnome-open
+    elif [[ -x /usr/bin/kde-open ]]; then
+        TOOL=/usr/bin/kde-open
+    elif [[ -x /usr/bin/gio ]]; then
+        TOOL=/usr/bin/gio
+        OPTION="open"
+    elif [[ -x /usr/bin/mimeopen ]]; then
+        TOOL=/usr/bin/mimeopen
+    elif [[ -x /usr/bin/xdg-open ]]; then
+        TOOL=/usr/bin/xdg-open
+    else
+        echo Did not find any tool for opening file according to their type
+        return
+    fi
+
+    echo "Using open-tool ${TOOL} ${OPTION}"
+
 	for i in "$@"
 	do
-		echo $i
-		gnome-open "$i"
-		sleep 2
+		echo ${i}
+		${TOOL} ${OPTION} "${i}"
+		sleep 1
 	done
 }
 
@@ -60,7 +82,7 @@ alias ai="sudo apt-get install"
 alias au="au_func"
 alias lcdoff="xset dpms force off"
 alias apo="apt-cache policy"
-if [ `uname --machine` == armv7l -o `uname --machine` == armv6l ];then
+if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
   alias u="vi"
 else
   alias u="_u_func"
@@ -113,13 +135,13 @@ function gbout {
 	  git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
-
-if [ `uname --machine` == armv7l -o `uname --machine` == armv6l ];then
+# Raspberry still runs Debian Stretch which only has Java 8 by default
+if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 else
   export TERM=xterm
-  export JAVA_HOME=/usr/lib/jvm/java-11-oracle/
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 fi
 
 DEBEMAIL=dominik.stadler@gmx.at
