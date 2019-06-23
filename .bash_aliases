@@ -76,6 +76,11 @@ function __gnome_open_func() {
 	done
 }
 
+function mplay_func() {
+	smplayer "$@"
+	#-cache-min 30 -cache 512 "$@"
+}
+
 alias as="as_func"
 alias ap="apt-cache showpkg"
 alias ai="sudo apt-get install"
@@ -89,6 +94,7 @@ else
 fi
 alias iotop="iotop -o -d 5 -P -k"
 alias ll="ls -al"
+alias mplay="mplay_func"
 
 # git aliases, http://www.catonmat.net/blog/git-aliases/
 alias ga='git add'
