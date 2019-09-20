@@ -13,7 +13,8 @@ function au_func() {
 	# I didn't have a better place to put this so it is executed as part of the d-bus session
 	#dbus-send --session --dest=org.kde.akregator --type=method_call /Akregator  org.kde.akregator.part.saveSettings
 
-	sudo apt-get update && sudo apt-get dist-upgrade
+    # Use --allow-releaseinfo-change to accept change of source-settings
+	sudo apt-get update "$@" && sudo apt-get dist-upgrade "$@"
 }
 
 function _usbmount() {
