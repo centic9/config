@@ -26,39 +26,56 @@
 # m:xxx + c:xxx 
 # Shift+... 
 
+# Documentation is at
+#
+# https://wiki.archlinux.org/index.php/Xbindkeys
 
+
+# To activate changes do
+#
+# pkill xbindkeys
+# /usr/bin/xbindkeys -f /home/dstadler/.xbindkeysrc
 
 
 #keystate_numlock = enable
 #keystate_scrolllock = enable
 #keystate_capslock = enable
 
-
-
 "dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.next"
    XF86AudioNext
 
-"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.next"
-   Control+Alt+Mod2 + KP_Right
+#"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.next"
+#   Control+Alt+Mod2 + KP_Right
 
 "dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.previous"
    XF86AudioPrev
 
-"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.previous"
-   Control+Alt+Mod2 + KP_Left
+#"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.previous"
+#   Control+Alt+Mod2 + KP_Left
 
 "dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.stop"
    XF86AudioStop
 
-"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.stop"
-   Control+Alt+Mod2 + KP_Up
+#"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.stop"
+#   Control+Alt+Mod2 + KP_Up
 
 "dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.playPause"
    XF86AudioPlay
 
-"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.playPause"
-   Control+Alt+Mod2 + KP_Down
+#"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.playPause"
+#   Control+Alt+Mod2 + KP_Down
 
+# these clash with IntelliJ...
+
+# Support for PiRadio actions via REST API
+#"curl http://localhost:9999/player/seek?time=60"
+#   Control+Alt+Mod2 + Right
+
+#"curl http://localhost:9999/player/seek?time=-60"
+#   Control+Alt+Mod2 + Left
+
+#"curl http://localhost:9999/player/toggle"
+#   Control+Alt+Mod2 + Next
 
 #ban
 #"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.banCurrent"
@@ -69,6 +86,12 @@
 "dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.showCurrentlyPlaying"
     m:0xc + c:57
     Control+Alt + n 
+
+
+# Windows-E => Nautilus
+"/usr/bin/nautilus"
+    m:0x50 + c:26
+    Mod2+Mod4 + e
 
 #
 # End of xbindkeys configuration
