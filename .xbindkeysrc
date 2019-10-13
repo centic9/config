@@ -68,14 +68,20 @@
 # these clash with IntelliJ...
 
 # Support for PiRadio actions via REST API
-#"curl http://localhost:9999/player/seek?time=60"
-#   Control+Alt+Mod2 + Right
+"curl http://localhost:9999/player/seek?time=60"
+   Control+Alt+Mod2 + KP_Right
 
-#"curl http://localhost:9999/player/seek?time=-60"
-#   Control+Alt+Mod2 + Left
+"curl http://localhost:9999/player/seek?time=-60"
+   Control+Alt+Mod2 + KP_Left
 
-#"curl http://localhost:9999/player/toggle"
-#   Control+Alt+Mod2 + Next
+"curl http://localhost:9999/player/seek?time=180"
+   Control+Shift+Alt+Mod2 + KP_Right
+
+"curl http://localhost:9999/player/seek?time=-180"
+   Control+Shift+Alt+Mod2 + KP_Left
+
+"curl http://localhost:9999/player/toggle"
+   Control+Alt+Mod2 + KP_Down
 
 #ban
 #"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.banCurrent"
