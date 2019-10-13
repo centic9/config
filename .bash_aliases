@@ -145,10 +145,13 @@ function gbout {
 # Raspberry still runs Debian Stretch which only has Java 8 by default
 if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
   export TERM=linux
-  export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
+  export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt
+elif [[ `hostname` == "vs2362" ]];then
+  export TERM=linux
+  export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 else
   export TERM=xterm
-  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 fi
 
 DEBEMAIL=dominik.stadler@gmx.at
