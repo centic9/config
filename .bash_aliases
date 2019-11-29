@@ -117,8 +117,8 @@ alias iot='sudo iotop -d 30 -o -P -k'
 alias ifwatch='sudo watch --differences=cumulative --interval=30 ifconfig'
 alias usbmount='for i in b c d e f;do _usbmount /usb$i;done;mount | grep usb'
 alias usbumount='for i in a b c d e f;do _usbumount /usb$i;done;mount | grep usb'
-alias debuildnew='debuild "-i(.git|.svn|.travis.yml)" -S -sa'
-alias debuildexisting='debuild "-i(.git|.svn|.travis.yml)" -S -sd'
+alias debuildnew='debuild "-i(.git|.svn|.travis.yml|.idea|cmake-build-debug)" -S -sa'
+alias debuildexisting='debuild "-i(.git|.svn|.travis.yml|.idea|cmake-build-debug)" -S -sd'
 alias doc='sudo docker'
 alias g='__gradle_func'
 alias o='__gnome_open_func'
@@ -145,7 +145,7 @@ function gbout {
 # Raspberry still runs Debian Stretch which only has Java 8 by default
 if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
   export TERM=linux
-  export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-armhf
 elif [[ `hostname` == "vs2362" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle
