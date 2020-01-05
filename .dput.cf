@@ -117,6 +117,20 @@ incoming = ~dominik-stadler/dsta-bionic-ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
+[eoan-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-eoan-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[focal-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-focal-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
 [subversion17-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
