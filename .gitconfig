@@ -45,7 +45,7 @@
   diffuse = !diffuse --modified
   
   # [l = log] short one line logs with ref-names
-  l  = log --oneline --decorate=short
+  l = log --oneline --decorate=short
   
   # [l = log] short one line logs with ref-names, date and author - nice colored
   #https://coderwall.com/p/euwpig/a-better-git-log
@@ -55,7 +55,7 @@
   gl = log --oneline --decorate --stat --graph
   
   # [r = remote] listing remotes with urls
-  r  = remote -v
+  r = remote -v
   
   # [dfb = diff before pull]
   dfb = diff ORIG_HEAD HEAD
@@ -64,7 +64,7 @@
   sf = submodule foreach
   
   # [c = count] number of commits in current branch
-  c  = "!git log --oneline | wc -l "
+  c = "!git log --oneline | wc -l "
 
   # cc clean and compress the repository [be carefull, can use a lot of RAM and take long on big repositories]
   cc = "!du -hs .git; git gc --aggressive; du -hs .git;"
@@ -132,6 +132,7 @@
 	editor = vim
 	askpass = /usr/lib/git-core/git-gui--askpass
 	autocrlf = input
+	longpaths = true
 [merge]
 	tool = meld
 [mergetool "bc3"]
