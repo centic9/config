@@ -125,6 +125,9 @@ alias o='__gnome_open_func'
 alias git-import-orig='gbp import-orig'
 alias git-import-dsc='gbp import-dsc'
 alias git-import-dscs='gbp import-dscs'
+alias vaml='vi -c "set syntax:yaml" -'
+alias vson='vi -c "set syntax:json" -'
+alias pg='ps -aux | grep'
 
 # * If on master: gbin branch1 <-- this will show you what's in branch1 and not in master
 # * If on master: gbout branch1 <-- this will show you what's in master that's not in branch 1
