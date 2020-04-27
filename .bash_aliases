@@ -183,3 +183,8 @@ export LANGUAGE="de_AT:de"
 export LANG=de_AT.UTF-8
 
 export EDITOR=vi
+
+# Set default Keyboard click speed
+# https://askubuntu.com/questions/846030/how-to-set-keyboard-repeat-delay-and-speed-in-ubuntu-gnome-16-10
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
+gsettings set org.gnome.desktop.peripherals.keyboard delay 150
