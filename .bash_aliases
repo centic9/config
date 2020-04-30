@@ -186,5 +186,7 @@ export EDITOR=vi
 
 # Set default Keyboard click speed
 # https://askubuntu.com/questions/846030/how-to-set-keyboard-repeat-delay-and-speed-in-ubuntu-gnome-16-10
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
-gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+if [ -e /usr/bin/gsettings ]; then
+	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
+	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+fi
