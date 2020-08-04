@@ -149,6 +149,10 @@ function gbout {
 if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-armhf
+# Raspberry Pi OS 64-bit has a different location for the JVM
+elif [[ `uname --machine` == aarch64 ]];then
+  export TERM=linux
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
 elif [[ `hostname` == "vs2362" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle
