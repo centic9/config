@@ -15,6 +15,10 @@ ln -sf `pwd`/.Xmodmap ~/
 test -L ~/.toprc && mv ~/.toprc /tmp/.toprc.sav
 ln -sf `pwd`/.toprc ~/
 
+mkdir -p ~/.config/procps
+test -L ~/.config/procps/toprc && mv ~/.config/procps/toprc /tmp/toprc.sav
+ln -sf `pwd`/.toprc ~/.config/procps/toprc
+
 test -L ~/.gitconfig && mv ~/.gitconfig /tmp/.gitconfig.sav
 ln -sf `pwd`/.gitconfig ~/
 
