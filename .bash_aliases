@@ -146,11 +146,11 @@ function gbout {
 }
 
 # Raspberry still runs Debian Stretch which only has Java 8 by default
-if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
+if [[ `uname --machine` == "armv7l" || `uname --machine` == "armv6l" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-armhf
 # Raspberry Pi OS 64-bit has a different location for the JVM
-elif [[ `uname --machine` == aarch64 ]];then
+elif [[ `uname --machine` == "aarch64" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
 elif [[ `hostname` == "vs2362" ]];then
@@ -194,3 +194,7 @@ if [ -e /usr/bin/gsettings ]; then
 	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
 	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
 fi
+
+# Try to disable visible bell from popping up or changing things like the konsole taskbar icon
+# See https://www.ibiblio.org/pub/Linux/docs/HOWTO/Visual-Bell for more details
+set bell-style none
