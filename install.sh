@@ -30,3 +30,6 @@ ln -sf `pwd`/.Rprofile ~/
 
 test -L ~/.xbindkeysrc && mv ~/.xbindkeysrc /tmp/.xbindkeysrc.sav
 ln -sf `pwd`/.xbindkeysrc ~/
+
+test -L ~/.gnomerc && mv ~/.gnomerc /tmp/.gnomerc.sav
+ln -sf `pwd`/.gnomerc ~/
