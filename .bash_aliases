@@ -199,7 +199,14 @@ fi
 # See https://www.ibiblio.org/pub/Linux/docs/HOWTO/Visual-Bell for more details
 set bell-style none
 
-# See e.g. https://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
+# See
+# https://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
+# https://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+
+# Avoid duplicates and set larger history size
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
 
 # keep history from all terminal windows
 shopt -s histappend
