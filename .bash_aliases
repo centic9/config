@@ -198,3 +198,11 @@ fi
 # Try to disable visible bell from popping up or changing things like the konsole taskbar icon
 # See https://www.ibiblio.org/pub/Linux/docs/HOWTO/Visual-Bell for more details
 set bell-style none
+
+# See e.g. https://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
+
+# keep history from all terminal windows
+shopt -s histappend
+
+# immediately persist history after each command
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
