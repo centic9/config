@@ -124,6 +124,8 @@
 
   st = status -sb
 
+  # https://dev-wiki.dynatrace.org/display/ruxit/Morning+warmup+-+Team+Elastic
+  delete-merged-branches="!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [diff]
   tool = beyondcompare
 [difftool "beyondcompare"]
