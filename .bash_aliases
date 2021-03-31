@@ -153,13 +153,14 @@ if [[ `uname --machine` == "armv7l" || `uname --machine` == "armv6l" ]];then
 elif [[ `uname --machine` == "aarch64" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
-elif [[ `hostname` == "vs2362" ]];then
-  export TERM=linux
-  export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 else
   export TERM=xterm
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 fi
+
+# Some tools support using a specific version of Java based on these environment variables
+export JAVA_HOME11=${JAVA_HOME}
+export JAVA_HOME8=/usr/lib/jvm/java-8-openjdk-amd64
 
 DEBEMAIL=dominik.stadler@gmx.at
 DEBFULLNAME="Dominik Stadler (Ubuntu key)"
