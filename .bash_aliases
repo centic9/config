@@ -79,7 +79,8 @@ function __gnome_open_func() {
 
 function mplay_func() {
 	smplayer "$@"
-	#-cache-min 30 -cache 512 "$@"
+	# -cache-min 30 -cache 512 "$@"
+	# -actions "pl_shuffle true pl_repeat true"
 }
 
 alias as="as_func"
