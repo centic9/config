@@ -129,6 +129,7 @@ alias git-import-dscs='gbp import-dscs'
 alias vaml='vi -c "set syntax:yaml" -'
 alias vson='vi -c "set syntax:json" -'
 alias pg='ps -aux | grep'
+alias psm='ps -aef --sort start_time | grep -v lasdasjd ; ps -aef | wc ; dpkg --list | wc ; df -h'
 
 # * If on master: gbin branch1 <-- this will show you what's in branch1 and not in master
 # * If on master: gbout branch1 <-- this will show you what's in master that's not in branch 1
