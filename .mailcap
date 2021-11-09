@@ -1,0 +1,2 @@
+application/x-java-archive;/usr/bin/file-roller %s
+application/x-java-jnlp-file;/usr/lib/jvm/java-8-oracle/bin/javaws %s

@@ -33,3 +33,6 @@ ln -sf `pwd`/.xbindkeysrc ~/
 
 test -L ~/.gnomerc && mv ~/.gnomerc /tmp/.gnomerc.sav
 ln -sf `pwd`/.gnomerc ~/
+
+test -L ~/.mailcap && mv ~/.mailcap /tmp/.mailcap.sav
+ln -sf `pwd`/.mailcap ~/
