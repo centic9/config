@@ -195,8 +195,13 @@ export EDITOR=vi
 # Set default Keyboard click speed
 # https://askubuntu.com/questions/846030/how-to-set-keyboard-repeat-delay-and-speed-in-ubuntu-gnome-16-10
 if [ -e /usr/bin/gsettings ]; then
-	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
-	/usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+    # we can only perform this if the schema is available
+    /usr/bin/gsettings list-schemas | grep org.gnome.desktop.peripherals.keyboard > /dev/null
+    RET=$?
+    if [ ${RET} -eq 0 ]; then
+	    /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
+	    /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+	fi
 fi
 
 # Try to disable visible bell from popping up or changing things like the konsole taskbar icon
