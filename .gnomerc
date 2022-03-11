@@ -1,1 +1,2 @@
+# disable the TrackPoint button on IBM/Lenovo Laptops
 xinput set-prop "TPPS/2 IBM TrackPoint" "Device Enabled" 0
