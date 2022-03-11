@@ -1,5 +1,16 @@
 #
-# These settings are stored as part of the configuration project
+#
+#
+#
+#
+#
+# These settings are handled by the config-project,
+# make sure to apply changes there as well
+#
+#
+#
+#
+#
 #
 
 [DEFAULT]
@@ -16,104 +27,6 @@ incoming = ~dominik-stadler/ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
-[jaunty-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-jaunty-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[karmic-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-karmic-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[lucid-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-lucid-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[maverick-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-maverick-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[natty-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-natty-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[oneiric-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-oneiric-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[precise-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-precise-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[quantal-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-quantal-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[trusty-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-trusty-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[utopic-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-utopic-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[vivid-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-vivid-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[wily-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-wily-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[xenial-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-xenial-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[artful-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-artful-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
 [bionic-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
@@ -121,17 +34,24 @@ incoming = ~dominik-stadler/dsta-bionic-ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
-[eoan-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-eoan-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
 [focal-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
 incoming = ~dominik-stadler/dsta-focal-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[impish-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-impish-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[jammy-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-jammy-ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
@@ -153,6 +73,13 @@ allow_unsigned_uploads = 0
 fqdn = ppa.launchpad.net
 method = ftp
 incoming = ~dominik-stadler/subversion-1.9/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[subversion110-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/subversion-1.10/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
