@@ -36,3 +36,6 @@ ln -sf `pwd`/.gnomerc ~/
 
 test -L ~/.mailcap && mv ~/.mailcap /tmp/.mailcap.sav
 ln -sf `pwd`/.mailcap ~/
+
+test -L ~/.npmrc && mv ~/.npmrc /tmp/.npmrc.sav
+ln -sf `pwd`/.npmrc ~/
