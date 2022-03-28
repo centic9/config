@@ -129,7 +129,7 @@ alias git-import-dscs='gbp import-dscs'
 alias vaml='vi -c "set syntax:yaml" -'
 alias vson='vi -c "set syntax:json" -'
 alias pg='ps -aux | grep'
-alias psm='ps -aef --sort start_time | grep -v lasdasjd ; echo ; echo -n "procs: " ; ps -aef | wc -l ; echo -n "pkgs: " ; dpkg --list | wc -l ; echo ; df -h'
+alias psm='ps -aef --sort start_time | grep -v lasdasjd ; echo ; echo -n "procs: " ; ps -aef | wc -l ; echo -n "pkgs:  " ; dpkg --list | wc -l ; echo ; df -h --exclude-type=devtmpfs'
 alias kc='minikube kubectl --'
 
 # * If on master: gbin branch1 <-- this will show you what's in branch1 and not in master
