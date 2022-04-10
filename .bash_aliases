@@ -138,7 +138,7 @@ alias kc='minikube kubectl --'
 # * If on master: gbout branch1 <-- this will show you what's in master that's not in branch 1
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-  }
+}
 
 function gbin {
   echo branch \($1\) has these commits and \($(parse_git_branch)\) does not
@@ -150,7 +150,7 @@ function gbout {
 	  git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
-# Raspberry still runs Debian Stretch which only has Java 8 by default
+# Raspberry has the JDK in a different directory depending on hardware architecture
 if [[ `uname --machine` == "armv7l" || `uname --machine` == "armv6l" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-armhf
@@ -164,18 +164,15 @@ else
 fi
 
 # Some tools support using a specific version of Java based on these environment variables
-export JAVA_HOME11=${JAVA_HOME}
 export JAVA_HOME8=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME11=${JAVA_HOME}
+export JAVA_HOME17=/usr/lib/jvm/java-17-openjdk-amd64
 
-DEBEMAIL=dominik.stadler@gmx.at
-DEBFULLNAME="Dominik Stadler (Ubuntu key)"
-export DEBEMAIL DEBFULLNAME
+export DEBEMAIL=dominik.stadler@gmx.at
+export DEBFULLNAME="Dominik Stadler (Ubuntu key)"
 
 # see http://pkg-perl.alioth.debian.org/howto/quilt.html
 export QUILT_PATCHES=debian/patches
-
-# sudo dpkg --configure -a
-
 
 # color for manpages, see http://tuxarena.blogspot.com/2009/06/6-bash-productivity-tips.html
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
