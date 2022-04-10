@@ -51,17 +51,19 @@ function __gnome_open_func() {
     # associated application, use one that is available or
     # fail if none is found
     OPTION=
-    if [[ -x /usr/bin/gnome-open ]]; then
-        TOOL=/usr/bin/gnome-open
-    elif [[ -x /usr/bin/kde-open ]]; then
-        TOOL=/usr/bin/kde-open
+    if [[ -x /usr/bin/xdg-open ]]; then
+        TOOL=/usr/bin/xdg-open
     elif [[ -x /usr/bin/gio ]]; then
         TOOL=/usr/bin/gio
         OPTION="open"
+    elif [[ -x /usr/bin/gnome-open ]]; then
+        TOOL=/usr/bin/gnome-open
+    elif [[ -x /usr/bin/kde-open ]]; then
+        TOOL=/usr/bin/kde-open
+    elif [[ -x /usr/bin/kde-open ]]; then
+        TOOL=/usr/bin/kde-open5
     elif [[ -x /usr/bin/mimeopen ]]; then
         TOOL=/usr/bin/mimeopen
-    elif [[ -x /usr/bin/xdg-open ]]; then
-        TOOL=/usr/bin/xdg-open
     else
         echo Did not find any tool for opening file according to their type
         return
