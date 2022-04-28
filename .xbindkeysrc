@@ -13,6 +13,16 @@
 #
 #
 
+
+# Use the tool "xbindkeys-config" to configure keys
+
+
+# To activate changes use xbindkeys-config or the following:
+#
+# pkill xbindkeys
+# /usr/bin/xbindkeys -f /home/dstadler/.xbindkeysrc
+
+
 ###########################
 # xbindkeys configuration #
 ###########################
@@ -24,13 +34,14 @@
 #
 # A list of keys is in /usr/include/X11/keysym.h and in
 # /usr/include/X11/keysymdef.h
+# (provided by package x11proto-dev)
 # The XK_ is not needed.
 #
 # List of modifier (on my keyboard):
 #   Control, Shift, Mod1 (Alt), Mod2 (NumLock),
 #   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
 #
-# Another way to specifie a key is to use 'xev' and set the
+# Another way to specify a key is to use 'xev' and set the
 # keycode with c:nnn or the modifier with m:nnn where nnn is
 # the keycode or the state returned by xev
 #
@@ -45,11 +56,6 @@
 #
 # https://wiki.archlinux.org/index.php/Xbindkeys
 
-
-# To activate changes do
-#
-# pkill xbindkeys
-# /usr/bin/xbindkeys -f /home/dstadler/.xbindkeysrc
 
 
 #keystate_numlock = enable
@@ -98,8 +104,17 @@
 "curl http://localhost:9999/player/toggle"
    Control+Alt+Mod2 + KP_Down
 
+#SwitchSound
 "/opt/svn/bin/switchSound.sh"
    Control+Alt+Mod2 + KP_Up
+
+#SwitchSound - Soundcard
+"/opt/svn/bin/switchSound.sh 1"
+   Control+Alt + KP_Divide
+
+#SwitchSound - USB Headset
+"/opt/svn/bin/switchSound.sh 3"
+   Control+Alt + KP_Multiply
 
 # KP_Enter
 # KP_Home
