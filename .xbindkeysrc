@@ -98,6 +98,32 @@
 "curl http://localhost:9999/player/toggle"
    Control+Alt+Mod2 + KP_Down
 
+"/opt/svn/bin/switchSound.sh"
+   Control+Alt+Mod2 + KP_Up
+
+# KP_Enter
+# KP_Home
+# KP_Left
+# KP_Up
+# KP_Right
+# KP_Down
+# KP_Prior
+# KP_Page_Up
+# KP_Next
+# KP_Page_Down
+# KP_End
+# KP_Begin
+# KP_Insert
+# KP_Delete
+# KP_Equal
+# KP_Multiply
+# KP_Add
+# KP_Separator
+# KP_Subtract
+# KP_Decimal
+# KP_Divide
+
+
 #ban
 #"dbus-send --session --print-reply --dest=org.jajuk.dbus.DBusSupport /JajukDBus org.jajuk.services.dbus.DBusSupport.banCurrent"
 #    m:0xc + c:56
