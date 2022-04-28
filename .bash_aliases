@@ -1,3 +1,18 @@
+#
+#
+#
+#
+#
+#
+# These settings are handled by the config-project,
+# make sure to apply changes there as well
+#
+#
+#
+#
+#
+#
+
 # Collection of useful aliases and other stuff that I usually adjust in .bashrc
 
 function as_func() {

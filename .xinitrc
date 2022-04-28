@@ -1,3 +1,18 @@
+#
+#
+#
+#
+#
+#
+# These settings are handled by the config-project,
+# make sure to apply changes there as well
+#
+#
+#
+#
+#
+#
+
 # work around acpid problem, #230110
 xhost local:root	# allow root to run X applications
 
