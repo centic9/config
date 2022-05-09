@@ -173,6 +173,11 @@ if [[ `uname --machine` == "armv7l" || `uname --machine` == "armv6l" ]];then
 elif [[ `uname --machine` == "aarch64" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
+elif [ -f /etc/apache2/sites-available/corpora.conf ];then
+  # TikaVM only has AdoptOpenJDK, unfortunately the hostname is not set properly
+  # thus we resort to a check on existence of a specific file...
+  export TERM=linux
+  export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
 else
   export TERM=xterm
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
