@@ -178,6 +178,7 @@ elif [ -f /etc/apache2/sites-available/corpora.conf ];then
   # thus we resort to a check on existence of a specific file...
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
+  export PATH=$JAVA_HOME/bin:$PATH
 else
   export TERM=xterm
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
