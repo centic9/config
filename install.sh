@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# This script will replace some local config-files of the current
+# user with symbolic links to the files of tihs project
+#
 
 test -L ~/.bash_aliases && mv ~/.bash_aliases /tmp/.bash_aliases.sav
 ln -sf `pwd`/.bash_aliases ~/
