@@ -116,6 +116,10 @@
 "/opt/svn/bin/switchSound.sh 3"
    Control+Alt + KP_Multiply
 
+#SwitchSound - Monitor
+"/opt/svn/bin/switchSound.sh 5"
+   Control+Alt + KP_Enter
+
 # KP_Enter
 # KP_Home
 # KP_Left
