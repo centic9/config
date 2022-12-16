@@ -164,3 +164,5 @@
 	postBuffer = 2M
 [credential]
 	helper = cache --timeout 172800
+[init]
+	defaultBranch = main
