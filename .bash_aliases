@@ -33,7 +33,7 @@ function au_func() {
 }
 
 function __debuild_prepare_func() {
-    apt-get source "$@" && sudo apt-get build-dep "$@" && cd "$1*" && fakeroot debian/rules binary
+    apt-get source "$@" && sudo apt-get build-dep "$@" && cd "$1"*/ && fakeroot debian/rules binary
 }
 
 function _usbmount() {
