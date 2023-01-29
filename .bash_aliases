@@ -32,6 +32,10 @@ function au_func() {
 	sudo apt-get update "$@" && sudo apt-get dist-upgrade "$@"
 }
 
+function __debuild_prepare_func() {
+    apt-get source "$@" && sudo apt-get build-dep "$@" && cd "$1*" && fakeroot debian/rules binary
+}
+
 function _usbmount() {
 	#echo "Looking at $1"
 	mount $1 2> /dev/null && (echo "Mounting $1 " && nautilus $1 2> /dev/null &)
@@ -96,7 +100,7 @@ function __gnome_open_func() {
 	done
 }
 
-function mplay_func() {
+function __mplay_func() {
 	smplayer "$@"
 	# -cache-min 30 -cache 512 "$@"
 	# -actions "pl_shuffle true pl_repeat true"
@@ -115,7 +119,7 @@ else
 fi
 alias iotop="iotop -o -d 5 -P -k"
 alias ll="ls -al"
-alias mplay="mplay_func"
+alias mplay="__mplay_func"
 
 # git aliases, http://www.catonmat.net/blog/git-aliases/
 alias ga='git add'
@@ -139,6 +143,7 @@ alias usbmount='for i in b c d e f;do _usbmount /usb$i;done;mount | grep usb'
 alias usbumount='for i in a b c d e f;do _usbumount /usb$i;done;mount | grep usb'
 alias debuildnew='debuild "-i(.git|.svn|.travis.yml|.idea|cmake-build-debug)" -S -sa'
 alias debuildexisting='debuild "-i(.git|.svn|.travis.yml|.idea|cmake-build-debug)" -S -sd'
+alias debuildprepare='__debuild_prepare_func'
 alias doc='sudo docker'
 alias g='__gradle_func'
 alias o='__gnome_open_func'
