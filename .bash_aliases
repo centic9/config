@@ -174,8 +174,12 @@ function gbout {
 	  git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
+# Raspberry Pi can not run JDK 11 or newer
+if [[ `uname --machine` == "armv6l" ]];then
+  export TERM=linux
+  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
 # Raspberry has the JDK in a different directory depending on hardware architecture
-if [[ `uname --machine` == "armv7l" || `uname --machine` == "armv6l" ]];then
+elif [[ `uname --machine` == "armv7l" ]];then
   export TERM=linux
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-armhf
 # Raspberry Pi OS 64-bit has a different location for the JVM
