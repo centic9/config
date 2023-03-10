@@ -235,11 +235,12 @@ if [ -e /usr/bin/gsettings ]; then
     /usr/bin/gsettings list-schemas | grep org.gnome.desktop.peripherals.keyboard > /dev/null
     RET=$?
     if [ ${RET} -eq 0 ]; then
-	#echo "Setting keyboard repeat to 25 and delay to 200"
+        #echo "Setting keyboard repeat to 30 and delay to 200"
+        # Note: 150 leads to unwanted double keystrokes
         /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
-        /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 150
+        /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
     else
-	echo "Cannot set keyboard refresh, schema org.gnome.desktop.peripherals.keyboard is missing"
+        echo "Cannot set keyboard refresh, schema org.gnome.desktop.peripherals.keyboard is missing"
     fi
 else
     echo "Cannot set keyboard refresh, gsettings not found"
