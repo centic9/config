@@ -43,3 +43,6 @@ ln -sf `pwd`/.mailcap ~/
 
 test -L ~/.npmrc && mv ~/.npmrc /tmp/.npmrc.sav
 ln -sf `pwd`/.npmrc ~/
+
+test -L ~/.config/autostart/KeyboardRefreshRate.desktop && mv ~/.config/autostart/KeyboardRefreshRate.desktop /tmp/KeyboardRefreshRate.desktop
+ln -sf `pwd`/KeyboardRefreshRate.desktop ~/.config/autostart/

@@ -16,20 +16,20 @@
 # Collection of useful aliases and other stuff that I usually adjust in .bashrc
 
 function as_func() {
-	apt-cache search $1 | sort
+    apt-cache search $1 | sort
 }
 
 function au_func() {
-	# also ask Akregator to persist it's database, this is a workaround for bugs
-	# https://bugs.kde.org/show_bug.cgi?id=210408
-	# https://bugs.kde.org/show_bug.cgi?id=199232
-	# https://bugs.kde.org/show_bug.cgi?id=196633
-	# https://bugs.kde.org/show_bug.cgi?id=185507
-	# I didn't have a better place to put this so it is executed as part of the d-bus session
-	#dbus-send --session --dest=org.kde.akregator --type=method_call /Akregator  org.kde.akregator.part.saveSettings
+    # also ask Akregator to persist it's database, this is a workaround for bugs
+    # https://bugs.kde.org/show_bug.cgi?id=210408
+    # https://bugs.kde.org/show_bug.cgi?id=199232
+    # https://bugs.kde.org/show_bug.cgi?id=196633
+    # https://bugs.kde.org/show_bug.cgi?id=185507
+    # I didn't have a better place to put this so it is executed as part of the d-bus session
+    #dbus-send --session --dest=org.kde.akregator --type=method_call /Akregator  org.kde.akregator.part.saveSettings
 
     # Use --allow-releaseinfo-change to accept change of source-settings
-	sudo apt-get update "$@" && sudo apt-get dist-upgrade "$@"
+    sudo apt-get update "$@" && sudo apt-get dist-upgrade "$@"
 }
 
 function __debuild_prepare_func() {
@@ -37,34 +37,34 @@ function __debuild_prepare_func() {
 }
 
 function _usbmount() {
-	#echo "Looking at $1"
-	mount $1 2> /dev/null && (echo "Mounting $1 " && nautilus $1 2> /dev/null &)
+    #echo "Looking at $1"
+    mount $1 2> /dev/null && (echo "Mounting $1 " && nautilus $1 2> /dev/null &)
 }
 
 function _usbumount() {
-	#echo "Looking at $1"
-	mount | grep $1 && (echo "Unmounting $1" && umount $1)
+    #echo "Looking at $1"
+    mount | grep $1 && (echo "Unmounting $1" && umount $1)
 }
 
 function _u_func() {
-	geany -l 1 "$@" &
+    geany -l 1 "$@" &
 }
 
 function __gradle_func() {
-	if [[ -x gradlew ]]
-	then
-		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ./gradlew --warning-mode all "$@"
-		 #| \
+    if [[ -x gradlew ]]
+    then
+        GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ./gradlew --warning-mode all "$@"
+         #| \
   #perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   #(which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   #(which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
-	else
-		GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 gradle --warning-mode all "$@"
-	#	 | \
+    else
+        GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 gradle --warning-mode all "$@"
+    #     | \
   #perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   #(which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   #(which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
-	fi
+    fi
 }
 
 function __gnome_open_func() {
@@ -92,18 +92,18 @@ function __gnome_open_func() {
 
     echo "Using open-tool ${TOOL} ${OPTION}"
 
-	for i in "$@"
-	do
-		echo ${i}
-		${TOOL} ${OPTION} "${i}"
-		sleep 1
-	done
+    for i in "$@"
+    do
+        echo ${i}
+        ${TOOL} ${OPTION} "${i}"
+        sleep 1
+    done
 }
 
 function __mplay_func() {
-	smplayer "$@"
-	# -cache-min 30 -cache 512 "$@"
-	# -actions "pl_shuffle true pl_repeat true"
+    smplayer "$@"
+    # -cache-min 30 -cache 512 "$@"
+    # -actions "pl_shuffle true pl_repeat true"
 }
 
 alias as="as_func"
@@ -166,12 +166,12 @@ function parse_git_branch {
 
 function gbin {
   echo branch \($1\) has these commits and \($(parse_git_branch)\) does not
-	  git log ..$1 --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
+      git log ..$1 --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
 function gbout {
   echo branch \($(parse_git_branch)\) has these commits and \($1\) does not
-	  git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
+      git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
 # Raspberry Pi can not run JDK 11 or newer
@@ -228,16 +228,21 @@ export LANG=de_AT.UTF-8
 
 export EDITOR=vi
 
-# Set default Keyboard click speed
+# Set default Keyboard click speed and repeat rate
 # https://askubuntu.com/questions/846030/how-to-set-keyboard-repeat-delay-and-speed-in-ubuntu-gnome-16-10
 if [ -e /usr/bin/gsettings ]; then
     # we can only perform this if the schema is available
     /usr/bin/gsettings list-schemas | grep org.gnome.desktop.peripherals.keyboard > /dev/null
     RET=$?
     if [ ${RET} -eq 0 ]; then
-	    /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
-	    /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 200
-	fi
+	#echo "Setting keyboard repeat to 25 and delay to 200"
+        /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
+        /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 150
+    else
+	echo "Cannot set keyboard refresh, schema org.gnome.desktop.peripherals.keyboard is missing"
+    fi
+else
+    echo "Cannot set keyboard refresh, gsettings not found"
 fi
 
 # Try to disable visible bell from popping up or changing things like the konsole taskbar icon
