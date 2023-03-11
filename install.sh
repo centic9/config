@@ -4,6 +4,10 @@
 # user with symbolic links to the files of tihs project
 #
 
+set -eu
+
+echo "Installing symbolic links for default config files"
+
 test -L ~/.bash_aliases && mv ~/.bash_aliases /tmp/.bash_aliases.sav
 ln -sf `pwd`/.bash_aliases ~/
 
@@ -44,5 +48,6 @@ ln -sf `pwd`/.mailcap ~/
 test -L ~/.npmrc && mv ~/.npmrc /tmp/.npmrc.sav
 ln -sf `pwd`/.npmrc ~/
 
+mkdir -p ~/.config/autostart
 test -L ~/.config/autostart/KeyboardRefreshRate.desktop && mv ~/.config/autostart/KeyboardRefreshRate.desktop /tmp/KeyboardRefreshRate.desktop
 ln -sf `pwd`/KeyboardRefreshRate.desktop ~/.config/autostart/
