@@ -211,6 +211,12 @@ export DEBFULLNAME="Dominik Stadler (Ubuntu key)"
 # see http://pkg-perl.alioth.debian.org/howto/quilt.html
 export QUILT_PATCHES=debian/patches
 
+# Instruct LibreOffice to use different UI which is much faster
+# https://askubuntu.com/questions/1375082/libreoffice-7-2-calc-slow-on-ubuntu-21-10
+# https://ask.libreoffice.org/t/calc-and-writer-ver-7-0-are-extremely-slow/58522/5
+# https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1940836
+export SAL_USE_VCLPLUGIN=qt5
+
 # color for manpages, see http://tuxarena.blogspot.com/2009/06/6-bash-productivity-tips.html
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
