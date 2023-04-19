@@ -228,9 +228,14 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 wiki() { dig +short txt $1.wp.dg.cx; }
 memtop() { ps aux | sort -nk +4 | tail; }
 
-# somehow this did include spansish es_ES?!
-export LANGUAGE="de_AT:de"
-export LANG=de_AT.UTF-8
+# On TikaVM, there is only de_DE
+if [ -f /etc/apache2/sites-available/corpora.conf ];then
+    export LANGUAGE="de_DE:de"
+    export LANG=de_DE.UTF-8
+else
+    export LANGUAGE="de_AT:de"
+    export LANG=de_AT.UTF-8
+fi
 
 export EDITOR=vi
 
