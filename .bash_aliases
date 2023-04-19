@@ -47,7 +47,14 @@ function _usbumount() {
 }
 
 function _u_func() {
-    geany -l 1 "$@" &
+    # open the given file in a text editor
+    # use graphical text editor 'geany' if available, otherwise 'vi'
+    if [[ -x /usr/bin/geany ]]
+    then
+        /usr/bin/geany -l 1 "$@" &
+    else
+        vi "$@"
+    fi
 }
 
 function __gradle_func() {
@@ -86,7 +93,7 @@ function __gnome_open_func() {
     elif [[ -x /usr/bin/mimeopen ]]; then
         TOOL=/usr/bin/mimeopen
     else
-        echo Did not find any tool for opening file according to their type
+        echo Did not find any tool for opening files $@ according to their type
         return
     fi
 
@@ -112,11 +119,7 @@ alias ai="sudo apt-get install"
 alias au="au_func"
 alias lcdoff="xset dpms force off"
 alias apo="apt-cache policy"
-if [[ `uname --machine` == armv7l || `uname --machine` == armv6l ]];then
-  alias u="vi"
-else
-  alias u="_u_func"
-fi
+alias u="_u_func"
 alias iotop="iotop -o -d 5 -P -k"
 alias ll="ls -al"
 alias mplay="__mplay_func"
