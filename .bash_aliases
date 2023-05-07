@@ -218,6 +218,7 @@ export QUILT_PATCHES=debian/patches
 # https://askubuntu.com/questions/1375082/libreoffice-7-2-calc-slow-on-ubuntu-21-10
 # https://ask.libreoffice.org/t/calc-and-writer-ver-7-0-are-extremely-slow/58522/5
 # https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1940836
+# https://wiki.documentfoundation.org/Development/Environment_variables
 export SAL_USE_VCLPLUGIN=qt5
 
 # color for manpages, see http://tuxarena.blogspot.com/2009/06/6-bash-productivity-tips.html
