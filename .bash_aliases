@@ -251,6 +251,10 @@ if [ -e /usr/bin/gsettings ]; then
     RET=$?
     if [ ${RET} -eq 0 ]; then
         #echo "Setting keyboard repeat to 30 and delay to 180"
+
+        # Sometimes the delay is not set properly if it does not "change", thus first set it to a different value
+        /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 170
+
         # Note: 150 leads to unwanted double keystrokes
         /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
         /usr/bin/gsettings set org.gnome.desktop.peripherals.keyboard delay 180
