@@ -162,5 +162,17 @@
     m:0x50 + c:26
     Mod2+Mod4 + e
 
+#SwitchSound -Laptop - F10
+"/opt/svn/bin/switchSound.sh 1"
+   Control+Shift+Alt+Mod2 + F10
+
+#SwitchSound -Headset - F11
+"/opt/svn/bin/switchSound.sh 3"
+   Control+Shift+Alt+Mod2 + F11
+
+#SwitchSound -Screen - F12
+"/opt/svn/bin/switchSound.sh 5"
+   Control+Shift+Alt+Mod2 + F12
+
 #
 # End of xbindkeys configuration
