@@ -25,3 +25,8 @@ Install it manually via:
     git clone https://github.com/nojhan/liquidprompt.git
     echo "# Only load Liquid Prompt in interactive shells, not from a script or from scp" >> ~/.bashrc
     echo "[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt" >> ~/.bashrc
+
+### vimrc
+
+Currently configuration for `vim` is set via `/etc/vim/vimrc.local`, but maybe it should move to this 
+repository in the future.
