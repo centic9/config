@@ -19,6 +19,10 @@ function as_func() {
     apt-cache search $1 | sort
 }
 
+function asn_func() {
+    apt-cache search --names-only $1 | sort
+}
+
 function au_func() {
     # also ask Akregator to persist it's database, this is a workaround for bugs
     # https://bugs.kde.org/show_bug.cgi?id=210408
@@ -114,6 +118,7 @@ function __mplay_func() {
 }
 
 alias as="as_func"
+alias asn="asn_func"
 alias ap="apt-cache showpkg"
 alias ai="sudo apt-get install"
 alias au="au_func"
