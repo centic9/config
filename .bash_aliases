@@ -78,6 +78,42 @@ function __gradle_func() {
     fi
 }
 
+function __gradle8_func() {
+    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+    which java
+
+    __gradle_func "$@"
+}
+
+function __gradle11_func() {
+    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+    which java
+
+    __gradle_func "$@"
+}
+
+function __gradle17_func() {
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+    which java
+
+    __gradle_func "$@"
+}
+
+function __gradle21_func() {
+    export JAVA_HOME=/opt/jdk/21/jdk-21-ea+0.1
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+    which java
+
+    __gradle_func "$@"
+}
+
 function __gnome_open_func() {
     # there are different tools for opening files with the
     # associated application, use one that is available or
@@ -154,6 +190,10 @@ alias debuildexisting='debuild "-i(.git|.svn|.travis.yml|.idea|cmake-build-debug
 alias debuildprepare='__debuild_prepare_func'
 alias doc='sudo docker'
 alias g='__gradle_func'
+alias g8='__gradle8_func'
+alias g11='__gradle11_func'
+alias g17='__gradle17_func'
+alias g21='__gradle21_func'
 alias o='__gnome_open_func'
 alias git-import-orig='gbp import-orig'
 alias git-import-dsc='gbp import-dsc'
