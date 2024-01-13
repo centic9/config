@@ -17,7 +17,7 @@ jobs:
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@2.0.0
         env:
-          SHELLCHECK_OPTS: -a -x
+          SHELLCHECK_OPTS: -a -x -s bash
         with:
           severity: error
           additional_files: '.bash_aliases .xinitrc '
