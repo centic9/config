@@ -133,7 +133,7 @@ function __gnome_open_func() {
     elif [[ -x /usr/bin/mimeopen ]]; then
         TOOL=/usr/bin/mimeopen
     else
-        echo Did not find any tool for opening files $@ according to their type
+        echo Did not find any tool for opening files "$@" according to their type
         return
     fi
 
