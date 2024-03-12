@@ -48,6 +48,9 @@ ln -sf `pwd`/.mailcap ~/
 test -L ~/.npmrc && mv ~/.npmrc /tmp/.npmrc.sav
 ln -sf `pwd`/.npmrc ~/
 
+test -L ~/.pruneconfig && mv ~/.pruneconfig /tmp/.pruneconfig.sav
+ln -sf `pwd`/.pruneconfig ~/
+
 mkdir -p ~/.config/autostart
 test -L ~/.config/autostart/KeyboardRefreshRate.desktop && mv ~/.config/autostart/KeyboardRefreshRate.desktop /tmp/KeyboardRefreshRate.desktop
 ln -sf `pwd`/KeyboardRefreshRate.desktop ~/.config/autostart/

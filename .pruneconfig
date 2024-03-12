@@ -1,0 +1,27 @@
+#GpsPrune config file
+#Tue Mar 12 19:47:29 CET 2024
+prune.unitsetkey=unitset.kilometres
+prune.mapsource=9
+prune.autosavesettings=1
+prune.exiftoolpath=exiftool
+prune.numfixedmapsources=6
+prune.kmzimagewidth=240
+prune.altitudetolerance=0
+prune.lastimportfileformat=-1
+prune.heightexaggeration=100
+prune.windowbounds=2206x178x2140x1231
+prune.gnuplotpath=gnuplot
+prune.showmap=1
+prune.gpsbabelpath=gpsbabel
+prune.coorddisplay=19
+prune.waypointiconsize=1
+prune.povrayfont=crystal.ttf
+prune.terraingridsize=50
+prune.diskcache=/home/dstadler/.cache/gpsprune
+prune.gpsformat=garmin
+prune.latlonrange=45.76685;47.551854159683;9.05981;10.8749312320323
+prune.antialias=1
+prune.gpsdevice=usb\:
+prune.trackdirectory=/tmp/Gekaufte GPS-Tracks Schweizroute
+prune.recentfiles=6;r/tmp/Gekaufte GPS-Tracks Schweizroute/Schweizroute gesamt Hauptroute.gpx;r/tmp/Gekaufte GPS-Tracks Schweizroute/Radweg-Torbole-Rovereto.gpx;r/tmp/Gekaufte GPS-Tracks Schweizroute/1-Lindau-Schwaegalp.gpx;r/opt/svn/SuuntoHarvest/data/2024-03/14337708277.gpx;r/opt/svn/SuuntoHarvest/data/2024-03/14312626286.gpx;r/opt/svn/SuuntoHarvest/data/2024-03/14297797710.gpx
+prune.mapsourcelist=o\:CTW Prerender;https\://cs37700.dogadoserver.de/ctw/tilesCombined/{z}/{x}/{y}.png;png;18|o\:CTW;https\://c.tile.openstreetmap.org/{z}/{x}/{y}.png;png;https\://cs37700.dogadoserver.de/ctw/tiles/{z}/{x}/{y}.png;png;18|o\:CTW Tiles;https\://c.tile.openstreetmap.org/{z}/{x}/{y}.png;png;https\://cs37700.dogadoserver.de/ctw/tilesTiles/{z}/{x}/{y}.png;png;18|o\:CTW Prerender Tiles;https\://cs37700.dogadoserver.de/ctw/tilesTilesCombined/{z}/{x}/{y}.png;png;18|
