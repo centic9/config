@@ -1,5 +1,5 @@
 #GpsPrune config file
-#Tue Mar 12 19:47:29 CET 2024
+#Tue Mar 12 19:56:27 CET 2024
 prune.unitsetkey=unitset.kilometres
 prune.mapsource=9
 prune.autosavesettings=1
@@ -9,7 +9,7 @@ prune.kmzimagewidth=240
 prune.altitudetolerance=0
 prune.lastimportfileformat=-1
 prune.heightexaggeration=100
-prune.windowbounds=2206x178x2140x1231
+prune.windowbounds=1920x28x3440x1381
 prune.gnuplotpath=gnuplot
 prune.showmap=1
 prune.gpsbabelpath=gpsbabel
