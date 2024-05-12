@@ -269,6 +269,11 @@ export QUILT_PATCHES=debian/patches
 # https://wiki.documentfoundation.org/Development/Environment_variables
 export SAL_USE_VCLPLUGIN=qt5
 
+# Some dialogs look very bad if GTK_IM_MODULE=xim
+# So let's try to revert to ibus irrespective to what ~/.xinputrc contains
+# See https://askubuntu.com/questions/1321202/where-are-gtk-im-module-and-gtk-modules-set
+export GTK_IM_MODULE="ibus"
+
 # color for manpages, see http://tuxarena.blogspot.com/2009/06/6-bash-productivity-tips.html
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
