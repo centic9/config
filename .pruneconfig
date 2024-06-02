@@ -22,6 +22,6 @@ prune.gpsformat=garmin
 prune.latlonrange=48.309753220528364;48.31819698214531;14.283468509092927;14.305570581927896
 prune.antialias=1
 prune.gpsdevice=usb\:
-prune.trackdirectory=
+prune.trackdirectory=/tmp/gpx
 prune.recentfiles=
 prune.mapsourcelist=o\:CTW Prerender;https\://cs37700.dogadoserver.de/ctw/tilesSquaresCombined/{z}/{x}/{y}.png;png;18|o\:CTW;https\://c.tile.openstreetmap.org/{z}/{x}/{y}.png;png;https\://cs37700.dogadoserver.de/ctw/tilesSquares/{z}/{x}/{y}.png;png;18|o\:CTW Tiles;https\://c.tile.openstreetmap.org/{z}/{x}/{y}.png;png;https\://cs37700.dogadoserver.de/ctw/tilesTiles/{z}/{x}/{y}.png;png;18|o\:CTW Prerender Tiles;https\://cs37700.dogadoserver.de/ctw/tilesTilesCombined/{z}/{x}/{y}.png;png;18|
