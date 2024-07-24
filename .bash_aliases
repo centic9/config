@@ -289,9 +289,11 @@ memtop() { ps aux | sort -nk +4 | tail; }
 if [ -f /etc/apache2/sites-available/corpora.conf ];then
     export LANGUAGE="de_DE:de"
     export LANG=de_DE.UTF-8
+    export LC_CTYPE=de_DE.UTF-8
 else
     export LANGUAGE="de_AT:de"
     export LANG=de_AT.UTF-8
+    export LC_CTYPE=de_AT.UTF-8
 fi
 
 export EDITOR=vi
