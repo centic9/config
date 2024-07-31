@@ -54,3 +54,6 @@ ln -sf `pwd`/.pruneconfig ~/
 mkdir -p ~/.config/autostart
 test -L ~/.config/autostart/KeyboardRefreshRate.desktop && mv ~/.config/autostart/KeyboardRefreshRate.desktop /tmp/KeyboardRefreshRate.desktop
 ln -sf `pwd`/KeyboardRefreshRate.desktop ~/.config/autostart/
+
+test -L ~/.config/liquidpromptrc && mv ~/.config/liquidpromptrc /tmp/liquidpromptrc
+ln -sf `pwd`/liquidpromptrc ~/.config/liquidpromptrc
