@@ -45,7 +45,9 @@ LP_USER_ALWAYS=0
 # Do you want to display the percentages of load/batteries along with their
 # corresponding marks? Set to 0 to only print the colored marks.
 # Defaults to 1 (display percentages)
-LP_PERCENTS_ALWAYS=1
+#LP_PERCENTS_ALWAYS=1
+LP_ALWAYS_DISPLAY_VALUES=1
+LP_DISPLAY_VALUES_AS_PERCENTS=1
 
 # Do you want to use the permissions feature?
 # Recommended value is 1
