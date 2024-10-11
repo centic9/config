@@ -27,31 +27,17 @@ incoming = ~dominik-stadler/ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
-[bionic-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-bionic-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[focal-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-focal-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
-[impish-ppa]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~dominik-stadler/dsta-impish-ppa/ubuntu/
-login = dstadler
-allow_unsigned_uploads = 0
-
 [jammy-ppa]
 fqdn = ppa.launchpad.net
 method = ftp
 incoming = ~dominik-stadler/dsta-jammy-ppa/ubuntu/
+login = dstadler
+allow_unsigned_uploads = 0
+
+[noble-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~dominik-stadler/dsta-noble-ppa/ubuntu/
 login = dstadler
 allow_unsigned_uploads = 0
 
