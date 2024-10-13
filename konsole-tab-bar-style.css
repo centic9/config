@@ -1,0 +1,20 @@
+/* 
+ * https://docs.kde.org/stable5/en/konsole/konsole/tabbarstylsheet.html
+ * https://doc.qt.io/qt-6/stylesheet.html
+ * https://doc.qt.io/qt-6/stylesheet-reference.html
+*/
+
+QTabBar::tab {
+    font-size: 12px;
+    /*margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 1px;
+    padding: 3px;*/
+    min-width: 70px;
+    /*padding-right: 3px;
+    padding-left: 3px;*/
+}
+
+QTabBar::tab:selected {
+    color: red
+}
