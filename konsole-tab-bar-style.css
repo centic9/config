@@ -17,5 +17,5 @@ QTabBar::tab {
 }
 
 QTabBar::tab:selected {
-    color: red
+    color: red;
 }
