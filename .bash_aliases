@@ -268,7 +268,7 @@ export QUILT_PATCHES=debian/patches
 # https://ask.libreoffice.org/t/calc-and-writer-ver-7-0-are-extremely-slow/58522/5
 # https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1940836
 # https://wiki.documentfoundation.org/Development/Environment_variables
-export SAL_USE_VCLPLUGIN=qt5
+export SAL_USE_VCLPLUGIN=qt6
 
 # Some dialogs look very bad if GTK_IM_MODULE=xim
 # So let's try to revert to ibus irrespective to what ~/.xinputrc contains
