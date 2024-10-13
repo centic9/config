@@ -11,11 +11,11 @@ QTabBar::tab {
     margin-left: 3px;
     margin-right: 1px;
     padding: 3px;*/
-    min-width: 70px;
+    min-width: 90px;
     /*padding-right: 3px;
     padding-left: 3px;*/
 }
 
 QTabBar::tab:selected {
-    color: red;
+    color: green;
 }
