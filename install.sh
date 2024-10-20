@@ -57,3 +57,6 @@ ln -sf `pwd`/KeyboardRefreshRate.desktop ~/.config/autostart/
 
 test -L ~/.config/liquidpromptrc && mv ~/.config/liquidpromptrc /tmp/liquidpromptrc
 ln -sf `pwd`/liquidpromptrc ~/.config/liquidpromptrc
+
+test -L ~/.gdbinit && mv ~/.gdbinit /tmp/.gdbinit.sav
+ln -sf `pwd`/.gdbinit ~/
