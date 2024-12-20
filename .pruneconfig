@@ -5,6 +5,7 @@ prune.mapsource=9
 prune.autosavesettings=1
 prune.exiftoolpath=exiftool
 prune.numfixedmapsources=6
+prune.linewidth=1
 prune.waypointsalt=-1
 prune.kmzimagewidth=240
 prune.altitudetolerance=0
