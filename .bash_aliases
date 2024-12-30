@@ -234,7 +234,7 @@ elif [[ `uname --machine` == "armv7l" ]];then
 # Raspberry Pi OS 64-bit has a different location for the JVM
 elif [[ `uname --machine` == "aarch64" ]];then
   export TERM=linux
-  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
+  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-armhf
 elif [ -f /etc/apache2/sites-available/corpora.conf ];then
   # TikaVM only has AdoptOpenJDK, unfortunately the hostname is not set properly
   # thus we resort to a check on existence of a specific file...
