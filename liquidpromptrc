@@ -145,4 +145,4 @@ LP_ENABLE_SSH_COLORS=0
 # will be disabled
 
 # vim: set et sts=4 sw=4 tw=120 ft=sh:
-LP_DISABLED_VCS_PATHS=("/opt/elasticsearch/git" "/opt/dynaTrace/cluster" "/opt/dynaTrace/devops.svn" "/opt/dynaTrace/ruxit" "/opt/dynaTrace/sandbox" "/opt/dynaTrace/trunk")
+LP_DISABLED_VCS_PATHS=("/opt/elasticsearch/git" "/opt/dynaTrace/cluster" "/opt/dynaTrace/devops.svn" "/opt/dynaTrace/ruxit" "/opt/dynaTrace/sandbox" "/opt/dynaTrace/trunk" "/usbc/Backup/WebHostingAustria/httpdocs" "/usbb/Backup/WebHostingAustria/httpdocs" "/opt/Backup/WebHostingAustria/httpdocs" "/usbc/Backup/GranitBiker-Homepage/httpdocs" "/usbb/Backup/GranitBiker-Homepage/httpdocs" "/opt/Backup/GranitBiker-Homepage/httpdocs")
