@@ -223,6 +223,11 @@ function gbout {
       git log $1.. --no-merges --format='%h | Author:%an | Date:%ad | %s' --date=local
 }
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Raspberry Pi can not run JDK 11 or newer
 if [[ `uname --machine` == "armv6l" ]];then
   export TERM=linux
