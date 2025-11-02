@@ -249,7 +249,7 @@ elif [ -f /etc/apache2/sites-available/corpora.conf ];then
   # TikaVM only has AdoptOpenJDK, unfortunately the hostname is not set properly
   # thus we resort to a check on existence of a specific file...
   export TERM=linux
-  export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
+  export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
   export PATH=$JAVA_HOME/bin:$PATH
 elif [[ ${JAVA_HOME} == "/usr/lib/jvm/java-11-openjdk-amd64" ]];then
   # Used to allow starting a 2nd instance of bash with JDK 11 set
