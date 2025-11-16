@@ -119,11 +119,18 @@ function __gnome_open_func() {
     # associated application, use one that is available or
     # fail if none is found
     OPTION=
-    if [[ -x /usr/bin/xdg-open ]]; then
-        TOOL=/usr/bin/xdg-open
-    elif [[ -x /usr/bin/gio ]]; then
+
+    # prefer gio as xdg-mime uses incorrect applications with
+    # no way to debug why it happens
+    if [[ -x /usr/bin/gio ]]; then
         TOOL=/usr/bin/gio
         OPTION="open"
+    elif [[ -x /usr/bin/xdg-open ]]; then
+        # see "xdg-mime" to investigate associated mime-type
+        # xdg-mime query filetype test.html
+        # xdg-mime query default application/xhtml+xml
+        # use env-var XDG_UTILS_DEBUG_LEVEL=3 for debug-output
+        TOOL=/usr/bin/xdg-open
     elif [[ -x /usr/bin/gnome-open ]]; then
         TOOL=/usr/bin/gnome-open
     elif [[ -x /usr/bin/kde-open ]]; then
