@@ -264,7 +264,7 @@ elif [[ ${JAVA_HOME} == "/usr/lib/jvm/java-11-openjdk-amd64" ]];then
 # Use JDK 17 on ZBox
 elif [[ `hostname` == "zbox" ]];then
   export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-elif [[ `hostname` == "trixie" ]];then
+elif [[ -d /usr/lib/jvm/java-21-openjdk-amd64 ]];then
   export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 else
   export TERM=xterm
