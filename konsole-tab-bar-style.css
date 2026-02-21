@@ -3,6 +3,9 @@
  * https://doc.qt.io/qt-6/stylesheet.html
  * https://doc.qt.io/qt-6/stylesheet-reference.html
  * https://doc.qt.io/qt-6/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
+
+
+ Configure this file in Konsole -> Configure -> Tab Bar/Splitters -> Miscellaneous
 */
 
 QTabBar::tab {
