@@ -60,3 +60,6 @@ ln -sf `pwd`/liquidpromptrc ~/.config/liquidpromptrc
 
 test -L ~/.gdbinit && mv ~/.gdbinit /tmp/.gdbinit.sav
 ln -sf `pwd`/.gdbinit ~/
+
+test -L ~/.local/share/konsole/Default-DoSt.profile && mv ~/.local/share/konsole/Default-DoSt.profile /tmp/Default-DoSt.profile.sav
+ln -sf `pwd`/konsole-Default-DoSt.profile ~/.local/share/konsole/Default-DoSt.profile
