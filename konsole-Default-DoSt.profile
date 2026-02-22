@@ -9,3 +9,6 @@ Parent=FALLBACK/
 AutoCopySelectedText=true
 TextEditorCmd=6
 TextEditorCmdCustom=geany PATH:LINE:COLUMN
+
+[Scrolling]
+HistorySize=5000
