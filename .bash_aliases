@@ -318,6 +318,9 @@ fi
 
 export EDITOR=vi
 
+# Seems to be used by LXDE: https://forums.freebsd.org/threads/lxde-localization.79632/
+export MM_CHARSET=UTF-8
+
 # Set default Keyboard click speed and repeat rate
 # https://askubuntu.com/questions/846030/how-to-set-keyboard-repeat-delay-and-speed-in-ubuntu-gnome-16-10
 if [ -e /usr/bin/gsettings ]; then
