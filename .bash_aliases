@@ -56,6 +56,9 @@ function _u_func() {
     if [[ -x /usr/bin/geany ]]
     then
         /usr/bin/geany -l 1 "$@" &
+    elif [[ -x /usr/bin/gnome-text-editor ]]
+    then
+        /usr/bin/gnome-text-editor "$@" &
     else
         vi "$@"
     fi
