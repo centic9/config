@@ -64,3 +64,6 @@ ln -sf `pwd`/.gdbinit ~/
 mkdir -p ~/.local/share/konsole/
 test -L ~/.local/share/konsole/Default-DoSt.profile && mv ~/.local/share/konsole/Default-DoSt.profile /tmp/Default-DoSt.profile.sav
 ln -sf `pwd`/konsole-Default-DoSt.profile ~/.local/share/konsole/Default-DoSt.profile
+
+test -L ~/.wgetrc && mv ~/.wgetrc /tmp/.wgetrc.sav
+ln -sf `pwd`/.wgetrc ~/
