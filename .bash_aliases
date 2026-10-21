@@ -84,6 +84,18 @@ function __gradle_func() {
   #perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
   #(which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
   #(which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
+    elif [[ -f ../gradlew ]]
+    then
+    	echo "Using gradle from parent-directory"
+
+        dos2unix -q ../gradlew
+        chmod a+x ../gradlew
+
+        GRADLE_OPTS="-Xms128m -Xmx400m" nice -n 10 ../gradlew "$@"
+         #| \
+  #perl -pe'$m|=/BUILD .*SUCCESS/; END {exit!$m}' && \
+  #(which notify-send > /dev/null && notify-send --icon=face-cool "`basename $(pwd)`: gradle $*" "Build SUCCESS" ; exit 0) || \
+  #(which notify-send > /dev/null && notify-send --icon=face-crying "`basename $(pwd)`: gradle $*" "Build FAILED" ; exit 1)
     else
     	echo "Using global gradle as no local gradle wrapper was found"
 
