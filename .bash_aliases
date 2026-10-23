@@ -189,6 +189,16 @@ function __mplay_func() {
     # -actions "pl_shuffle true pl_repeat true"
 }
 
+function __podman_func() {
+    if [ -x /usr/bin/podman ]; then
+        podman "$@"
+    elif [ -x /usr/bin/docker ]; then
+        docker "$@"
+    else
+        echo "Could not find podman or docker executable"
+    fi
+}
+
 alias as="as_func"
 alias asn="asn_func"
 alias ap="apt-cache showpkg"
@@ -242,6 +252,7 @@ alias psm='ps -aef --sort start_time | grep -v lasdasjd ; echo ; echo -n "procs:
 alias kc='minikube kubectl --'
 alias kubectl='minikube kubectl --'
 alias bcroot='QT_GRAPHICSSYSTEM=native sudo -E bcompare'
+alias p='__podman_func'
 
 # * If on master: gbin branch1 <-- this will show you what's in branch1 and not in master
 # * If on master: gbout branch1 <-- this will show you what's in master that's not in branch 1
